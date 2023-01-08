@@ -2,15 +2,26 @@ import { connect, styled } from "frontity";
 import Link from "./link";
 import Nav from "./nav";
 import MobileMenu from "./menu";
-
+import LogoImg from "../assets/logo.png";
+import Image from "@frontity/components/image";
 const Header = ({ state }) => {
   return (
     <>
       <Container>
+        <subHeader>
+          <nav>
+            <ul>
+              <li><a href="#">Home</a></li>
+            </ul>
+          </nav>
+        </subHeader>
         <StyledLink link="/">
-          <Title>{state.frontity.title}</Title>
+        <Logo 
+          src={LogoImg}
+          width="120px"
+          height="100%"
+         />
         </StyledLink>
-        <Description>{state.frontity.description}</Description>
         <MobileMenu />
       </Container>
       <Nav />
@@ -21,9 +32,15 @@ const Header = ({ state }) => {
 // Connect the Header component to get access to the `state` in it's `props`
 export default connect(Header);
 
-const Container = styled.div`
-  width: 848px;
+const Logo = styled(Image)`
   max-width: 100%;
+  display: block;
+`
+
+const Container = styled.div`
+  width: 100%;
+  margin: 0 auto;
+  max-width: 848px;
   box-sizing: border-box;
   padding: 24px;
   color: #fff;
@@ -45,3 +62,12 @@ const Description = styled.h4`
 const StyledLink = styled(Link)`
   text-decoration: none;
 `;
+
+const subHeader = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: #0C3B4A;
+  width: 100%;
+  height: 80px;
+`

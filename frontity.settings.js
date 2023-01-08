@@ -2,9 +2,8 @@ const settings = {
   "name": "testewp",
   "state": {
     "frontity": {
-      "url": "https://test.frontity.org",
-      "title": "Test Frontity Blog",
-      "description": "WordPress installation for Frontity development"
+      "title": "ocatarinense",
+      "description": "Trilhas, Viagens e Turismo em Santa Catarina e Pelo Mundo."
     }
   },
   "packages": [
@@ -13,30 +12,14 @@ const settings = {
       "state": {
         "theme": {
           "menu": [
-            [
-              "Home",
-              "/"
-            ],
-            [
-              "Nature",
-              "/category/nature/"
-            ],
-            [
-              "Travel",
-              "/category/travel/"
-            ],
-            [
-              "Japan",
-              "/tag/japan/"
-            ],
-            [
-              "About Us",
-              "/about-us/"
-            ]
+            ["Home", "/"],
+            ["Brasil", "/category/brasil/"],
+            ["América do Sul", "/category/america-do-sul/"],
+            ["Estados Unidos", "/category/eua/"],
           ],
           "featured": {
-            "showOnList": false,
-            "showOnPost": false
+            "showOnList": true,
+            "showOnPost": true
           }
         }
       }
@@ -45,7 +28,7 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "url": "https://test.frontity.org"
+          "url": "http://wpteste.local"
         }
       }
     },

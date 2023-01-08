@@ -1,6 +1,7 @@
 import { Global, css, connect, styled, Head } from "frontity";
 import Switch from "@frontity/components/switch";
 import Header from "./header";
+import SubHeader from "./subHeader";
 import List from "./list";
 import Post from "./post";
 import Loading from "./loading";
@@ -33,7 +34,9 @@ const Theme = ({ state }) => {
       <Global styles={globalStyles} />
 
       {/* Add the header of the site. */}
-      <HeadContainer>
+
+      <HeadContainer>    
+        <SubHeader />
         <Header />
       </HeadContainer>
 
@@ -70,7 +73,7 @@ const HeadContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #1f38c5;
+  background: #F7F7F7;
 `;
 
 const Main = styled.div`

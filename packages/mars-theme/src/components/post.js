@@ -58,7 +58,7 @@ const Post = ({ state, actions, libraries }) => {
             {author && (
               <StyledLink link={author.link}>
                 <Author>
-                  By <b>{author.name}</b>
+                  Por <b>{author.name}</b>
                 </Author>
               </StyledLink>
             )}
